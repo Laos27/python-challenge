@@ -6,7 +6,7 @@ import csv
 csvpath = os.path.join("Resources", "budget_data.csv")
 print(csvpath)
 #To export the results to a text file
-output_file = 'Results.txt'
+output_file = os.path.join("analysis", "Results.txt")
 
 #Set the variables
 column_sum = 0
@@ -53,7 +53,7 @@ with open(csvpath, encoding='utf') as csvfile:
             greatest_decrease = increase_min
             month_greatest_decrease = row[0]
 
-#Printing the final solution in the Terminal:  
+#Print the final solution in the Terminal:  
     print("Financial Analysis")
     print("--------------------------------")
     print(f"Total Months: {no_months}")
